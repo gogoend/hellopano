@@ -6,8 +6,9 @@
   <view class="itemContainer">
     <image class="logo" src="/ui/logo.svg"></image>
     <text class="name">Hello全视界</text>
-    <text class="slogan">新角度 新看法 新视野</text>
+    <text class="slogan">We are,VR</text>
   </view>
   <text class="copyright">
-  版权所有©2018 Hello全视界</text>
+  版权所有©2018 Hello全视界<br/>
+  https://www.me4vr.com/</text>
 </view>

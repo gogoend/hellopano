@@ -1,34 +1,53 @@
 .container{
   height: 100%;
-  display: flex;
-  justify-content: center;
-  direction: row;
-  align-items: center;
   text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
 .login_block{
-   margin-top: 550rpx; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150rpx
+}
+.login_block>view{
+  width: 80%;
+  
 }
 .slogan{
-  font-size: 40rpx;
-  margin-bottom: 10px;
+  margin: 10rpx
 }
-.login{
-  background-color: #29abe2;
+.login_btn{
+  background-color: transparent;
   color: #fff;
-  border: 1px solid #29abe2;
+  width:90%;
+  border: 1px solid #fff;
+
+}
+
+.login_btn:hover,.login_btn:active{
+  color: rgb(22,176,223);
+  background-color: #fff
 }
 
 .go_back{
   display: block;
-  margin-top: 10px
+  margin-top: 10px;
+  font-size:12px;
+  color:rgb(191,246,252);
 }
 
 .avatar{
-  position: absolute;
   width:220rpx;
   height:220rpx;
   border-radius: 50%;
+  margin-bottom: 20rpx
 }
 
 .copyright{

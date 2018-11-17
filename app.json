@@ -1,22 +1,13 @@
 {
   "pages": [
-
-                "pages/index/index",
-                
-            
-    "pages/pano/pano_viewer/pano_viewer",
-    "pages/pano/pano_detail/pano_detail",
-    "pages/pano/blog_viewer/blog_viewer",
-
-            
-
-        "pages/mycenter/mycenter",
-        "pages/blog/blog",
-        "pages/uploader/uploader",
-    "pages/channel/channel",
-    "pages/logs/logs",
+    "pages/index/index",
+    "pages/read/read",
+    "pages/blog/blog",
+    "pages/my/my",
     "pages/about/about",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/logs/logs"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -36,20 +27,13 @@
         "selectedIconPath": "ui/tabs/index_a.png"
       },
       {
-        "pagePath": "pages/channel/channel",
-        "text": "频道",
-        "iconPath": "ui/tabs/channel.png",
-        "selectedIconPath": "ui/tabs/channel_a.png"
-      },
-
-      {
         "pagePath": "pages/blog/blog",
         "text": "博文",
         "iconPath": "ui/tabs/blog.png",
         "selectedIconPath": "ui/tabs/blog_a.png"
       },
       {
-        "pagePath": "pages/mycenter/mycenter",
+        "pagePath": "pages/my/my",
         "text": "我的",
         "iconPath": "ui/tabs/me.png",
         "selectedIconPath": "ui/tabs/me_a.png"

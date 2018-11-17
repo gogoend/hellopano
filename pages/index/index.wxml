@@ -1,160 +1,107 @@
 <view class="container">
   <view class="bg_default bg"></view>
-  <view class="publishBtn" bindtap='gotoPublish'>
-  
-  <image src='/ui/plus.svg'></image>
+  <scroll-view class="section_block_wrap" scroll-x="{{true}}" >
+    <view class="section_block">
+      <view bindtap="gotoRead" data-objId="" class="section_thumb">
+        <image class="section_thumb_img" src="/img2.jpg">
+        </image>
+        <view class="section_title">地理达拉萨达可视角度卡登录卡拉圣诞节ask的</view>
+      </view>
+      <view class="section_foot">
+        <view class="section_operation">
+          <view>
+            <image src='/ui/view_card/heart.svg'></image>
+            <text>20</text>
+          </view>
+          <view>
+            <image src='/ui/view_card/comment.svg'></image>
+            <text>20</text>
+          </view>
+        </view>
+        <view class="section_operation">
+          <view>
+            <image src='/ui/view_card/eye.svg'></image>
+            <text>20</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="section_block">
+      <view bindtap="gotoRead" data-objId="" class="section_thumb">
+        <image class="section_thumb_img" src="/img2.jpg">
+        </image>
+        <view class="section_title">地理达拉萨达可视角度卡登录卡拉圣诞节ask的</view>
+      </view>
+      <view class="section_foot">
+        <view class="section_operation">
+          <view>
+            <image src='/ui/view_card/heart.svg'></image>
+            <text>20</text>
+          </view>
+          <view>
+            <image src='/ui/view_card/comment.svg'></image>
+            <text>20</text>
+          </view>
+        </view>
+        <view class="section_operation">
+          <view>
+            <image src='/ui/view_card/eye.svg'></image>
+            <text>20</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="section_block">
+      <view bindtap="gotoRead" data-objId="" class="section_thumb">
+        <image class="section_thumb_img" src="/img2.jpg">
+        </image>
+        <view class="section_title">地理达拉萨达可视角度卡登录卡拉圣诞节ask的</view>
+      </view>
+      <view class="section_foot">
+        <view class="section_operation">
+          <view>
+            <image src='/ui/view_card/heart.svg'></image>
+            <text>20</text>
+          </view>
+          <view>
+            <image src='/ui/view_card/comment.svg'></image>
+            <text>20</text>
+          </view>
+        </view>
+        <view class="section_operation">
+          <view>
+            <image src='/ui/view_card/eye.svg'></image>
+            <text>20</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="section_block">
+      <view bindtap="gotoRead" data-objId="" class="section_thumb">
+        <image class="section_thumb_img" src="/img2.jpg">
+        </image>
+        <view class="section_title">地理达拉萨达可视角度卡登录卡拉圣诞节ask的</view>
+      </view>
+      <view class="section_foot">
+        <view class="section_operation">
+          <view>
+            <image src='/ui/view_card/heart.svg'></image>
+            <text>20</text>
+          </view>
+          <view>
+            <image src='/ui/view_card/comment.svg'></image>
+            <text>20</text>
+          </view>
+        </view>
+        <view class="section_operation">
+          <view>
+            <image src='/ui/view_card/eye.svg'></image>
+            <text>20</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
 
-  </view>
-  <view class="section_block">
-    <view bindtap="gotoViewer" data-objId="" class="section_thumb">
-      <image class="section_thumb_img" src="/img2.jpg">
-      
-      </image>
-      <view class="section_title">地理达拉萨达可视角度卡登录卡拉圣诞节ask的</view>
-    </view>
-    <view class="section_foot">
-      <view class="section_operation">
-        <view>
-          <image src='/ui/view_card/heart.svg'></image>
-          <text>20</text>
-        </view>
-        <view>
-          <image src='/ui/view_card/comment.svg'></image>
-          <text>20</text>
-        </view>
-      </view>
-      <view class="section_operation">
-        <view>
-          <image src='/ui/view_card/eye.svg'></image>
-          <text>20</text>
-        </view>
-      </view>
-    </view>
-  </view>
-
-<view class="section_block">
-    <view bindtap="gotoViewer" data-objId="" class="section_thumb">
-      <image class="section_thumb_img" src="/img2.jpg"></image>
-      <view class="section_title">地理达拉萨达可视角度卡登录卡拉圣诞节ask的</view>
-    </view>
-    <view class="section_foot">
-      <view class="section_operation">
-        <view>
-          <image src='/ui/view_card/heart.svg'></image>
-          <text>20</text>
-        </view>
-        <view>
-          <image src='/ui/view_card/comment.svg'></image>
-          <text>20</text>
-        </view>
-      </view>
-      <view class="section_operation">
-        <view>
-          <image src='/ui/view_card/eye.svg'></image>
-          <text>20</text>
-        </view>
-      </view>
-    </view>
-  </view>
-
-  <view class="section_block">
-    <view bindtap="gotoViewer" data-objId="" class="section_thumb">
-      <image class="section_thumb_img" src="/img2.jpg"></image>
-      <view class="section_title">地理达拉萨达可视角度卡登录卡拉圣诞节ask的</view>
-    </view>
-    <view class="section_foot">
-      <view class="section_operation">
-        <view>
-          <image src='/ui/view_card/heart.svg'></image>
-          <text>20</text>
-        </view>
-        <view>
-          <image src='/ui/view_card/comment.svg'></image>
-          <text>20</text>
-        </view>
-      </view>
-      <view class="section_operation">
-        <view>
-          <image src='/ui/view_card/eye.svg'></image>
-          <text>20</text>
-        </view>
-      </view>
-    </view>
-  </view>
-
-  <view class="section_block">
-    <view bindtap="gotoViewer" data-objId="" class="section_thumb">
-      <image class="section_thumb_img" src="/img2.jpg"></image>
-      <view class="section_title">地理达拉萨达可视角度卡登录卡拉圣诞节ask的</view>
-    </view>
-    <view class="section_foot">
-      <view class="section_operation">
-        <view>
-          <image src='/ui/view_card/heart.svg'></image>
-          <text>20</text>
-        </view>
-        <view>
-          <image src='/ui/view_card/comment.svg'></image>
-          <text>20</text>
-        </view>
-      </view>
-      <view class="section_operation">
-        <view>
-          <image src='/ui/view_card/eye.svg'></image>
-          <text>20</text>
-        </view>
-      </view>
-    </view>
-  </view>
-
-  <view class="section_block">
-    <view bindtap="gotoViewer" data-objId="" class="section_thumb">
-      <image class="section_thumb_img" src="/img2.jpg"></image>
-      <view class="section_title">地理达拉萨达可视角度卡登录卡拉圣诞节ask的</view>
-    </view>
-    <view class="section_foot">
-      <view class="section_operation">
-        <view>
-          <image src='/ui/view_card/heart.svg'></image>
-          <text>20</text>
-        </view>
-        <view>
-          <image src='/ui/view_card/comment.svg'></image>
-          <text>20</text>
-        </view>
-      </view>
-      <view class="section_operation">
-        <view>
-          <image src='/ui/view_card/eye.svg'></image>
-          <text>20</text>
-        </view>
-      </view>
-    </view>
-  </view>
-
-  <view class="section_block">
-    <view bindtap="gotoViewer" data-objId="" class="section_thumb">
-      <image class="section_thumb_img" src="/img2.jpg"></image>
-      <view class="section_title">地理达拉萨达可视角度卡登录卡拉圣诞节ask的</view>
-    </view>
-    <view class="section_foot">
-      <view class="section_operation">
-        <view>
-          <image src='/ui/view_card/heart.svg'></image>
-          <text>20</text>
-        </view>
-        <view>
-          <image src='/ui/view_card/comment.svg'></image>
-          <text>20</text>
-        </view>
-      </view>
-      <view class="section_operation">
-        <view>
-          <image src='/ui/view_card/eye.svg'></image>
-          <text>20</text>
-        </view>
-      </view>
-    </view>
-  </view>
 
 </view>

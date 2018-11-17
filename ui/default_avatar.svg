@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1024"><defs><linearGradient id="a" x1="260.83" y1="4905.48" x2="901.31" y2="4992.85" gradientTransform="translate(-0.24 -4432.06)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#29abe2"/><stop offset="0.35" stop-color="aqua" stop-opacity="0.7"/><stop offset="0.8" stop-color="aqua" stop-opacity="0.2"/></linearGradient><linearGradient id="b" x1="661.12" y1="4944.74" x2="893.97" y2="4894.9" gradientTransform="translate(-0.24 -4432.06)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#53e3f4" stop-opacity="0.43"/><stop offset="0.72" stop-color="#00c9ea"/><stop offset="1" stop-color="#f2f2f2"/></linearGradient></defs><title>default_avatar</title><rect width="1024" height="1024" style="fill:#fff"/><path d="M834.91,623.11,772.13,330,672.9,341.64c-80.83,9.51-258.76-32.3-388.21-114.09l-.86-.54L188.48,713.18h0c203.27-118.53,417.73-150.4,517.35-124.09Z" style="fill:url(#a)"/><path d="M703,887.1c66.14-44,219.66-86.69,177.89-276.11L811.53,296.42C788.64,192.63,625.65,136.78,625.65,136.78Z" style="fill:url(#b)"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1024px" height="1024px" viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#DDDDDD;}
+	.st1{fill:#119CD3;}
+	.st2{fill:#1BC3EA;}
+</style>
+<title>default_avatar</title>
+<rect class="st0" width="1024" height="1024"/>
+<path class="st1" d="M865.9,629.8l-63.3-295.6l-100,11.8c-81.5,9.6-261-32.6-391.5-115l-0.9-0.6L214,720.6l0,0
+	C419,601.1,635.3,569,735.8,595.5L865.9,629.8z"/>
+<path class="st2" d="M706.7,839c57.7-38.4,191.5-75.6,155.1-240.7L801.3,324c-19.9-90.5-162-139.1-162-139.1L706.7,839z"/>
+</svg>

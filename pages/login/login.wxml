@@ -1,23 +1,18 @@
 <!--pages/login/login.wxml-->
 <view class="container bg_login">
-        <image wx:if="{{hasUserInfo}}" class="avatar" src='{{userInfo.avatarUrl}}'></image>
-        <image wx:else class="avatar" src='/ui/default_avatar.svg'></image>
-
-
   <view class="login_block">
     <view wx:if="{{!hasUserInfo && canIUse}}">
-      <view class='slogan'>视界之大，你在何方？</view>
-      <button class='login' open-type="getUserInfo" bindgetuserinfo="getUserInfo">一键登录我的全视界</button>
+        <image class="avatar" src='/ui/default_avatar.svg'></image>
+      <button class='login_btn' open-type="getUserInfo" bindgetuserinfo="getUserInfo">使用微信登录</button>
       <text class="go_back" bindtap='doNotLogin'>继续浏览，暂不登录</text>
-
     </view>
     <view wx:else>
+      <image class="avatar" src='{{userInfo.avatarUrl}}'></image>
       <view class='slogan'>你好，{{userInfo.nickName}}</view>
-      <button class='login' >登录成功，返回上一页</button>
+      <button class='login_btn' >登录成功</button>
     </view>
   </view>
 
-    <text class="copyright">
-  版权所有©2018 Hello全视界</text>
+  <text class="copyright">版权所有©2018 Hello全视界</text>
 
 </view>

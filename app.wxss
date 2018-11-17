@@ -2,8 +2,6 @@
 @import './ui/bg_img/bg_about.wxss';
 @import './ui/bg_img/bg_login.wxss';
 @import './ui/bg_img/bg_upload.wxss';
-
-
 page{
   height: 100%;
   width: 100%;
@@ -18,8 +16,6 @@ view,button,image,text,input,textarea,canvas{
 
 .container {
   width: 100%;
-  background-size: cover;
-  background-position: center center;
 } 
 
 .bg{

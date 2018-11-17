@@ -2,11 +2,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-align-items:flex-start;
+  justify-content: center;
   height: 320rpx;
-  background:linear-gradient(to top,rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.2) 20% ,rgba(0,0,0,0) 40%); 
-  margin-bottom:50px;
- 
+  box-shadow:2px 2px 4px rgba(27, 195, 234, 0.2);
 }
 .loginBtn{
   background-color: #29abe2;
@@ -21,20 +19,18 @@ align-items:flex-start;
 }
 
 .user_cover{
-  z-index: 0;
-  width: 100%;
-  height: 100%;
+  z-index:0;
+  width:100%;
+  height:100%;
+  position:absolute;
+  z-index:-1;
 }
 
 .user_area{
-position:absolute;
-bottom:-25%;
-display:flex;
-flex-direction:row;
-align-items:flex-end;
-margin-left:20px;
-
-
+  display:flex; 
+  flex-direction:row;
+  align-items:center;
+  margin-left:20px;
 }
 
 .user_avatar {
@@ -45,9 +41,8 @@ margin-left:20px;
 
 .user_nickname {
   color: #333;
-  margin-bottom:24rpx;
-margin-left:10rpx;
-
+  margin-left:30rpx;
+  color:#fff;
 }
 
 

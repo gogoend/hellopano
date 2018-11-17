@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="container">
-<view class="bg  bg_default"></view>
+<view class="bg"></view>
   <view class="userinfo">
-    <image class="user_cover" src="/ui/mycenter_cover.jpg"></image>
+    <image class="user_cover" src="/ui/mycenter_default_cover.png"></image>
     <view class="user_area">
 
 

@@ -11,19 +11,13 @@ Page({
 
   },
 
-  gotoViewer:function(event){
+  gotoRead:function(event){
       wx.navigateTo({
-        url: '/pages/pano/pano_detail/pano_detail',
+        url: '/pages/read/read',
       })
       console.log(event);
   },
 
-  gotoPublish:function(event){
-    wx.navigateTo({
-      url: '/pages/uploader/uploader',
-    })
-    console.log(event);
-  },
 
   onReachBottom: function (event) {
     console.log("加载更多")
