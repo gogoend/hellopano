@@ -1,0 +1,59 @@
+{
+  "pages": [
+
+                "pages/index/index",
+                
+            
+    "pages/pano/pano_viewer/pano_viewer",
+    "pages/pano/pano_detail/pano_detail",
+    "pages/pano/blog_viewer/blog_viewer",
+
+            
+
+        "pages/mycenter/mycenter",
+        "pages/blog/blog",
+        "pages/uploader/uploader",
+    "pages/channel/channel",
+    "pages/logs/logs",
+    "pages/about/about",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#29abe2",
+    "navigationBarTitleText": "Hello全视界",
+    "navigationBarTextStyle": "#ffffff"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#666",
+    "selectedColor": "#29abe2",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "ui/tabs/index.png",
+        "selectedIconPath": "ui/tabs/index_a.png"
+      },
+      {
+        "pagePath": "pages/channel/channel",
+        "text": "频道",
+        "iconPath": "ui/tabs/channel.png",
+        "selectedIconPath": "ui/tabs/channel_a.png"
+      },
+
+      {
+        "pagePath": "pages/blog/blog",
+        "text": "博文",
+        "iconPath": "ui/tabs/blog.png",
+        "selectedIconPath": "ui/tabs/blog_a.png"
+      },
+      {
+        "pagePath": "pages/mycenter/mycenter",
+        "text": "我的",
+        "iconPath": "ui/tabs/me.png",
+        "selectedIconPath": "ui/tabs/me_a.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+<!--pages/uploader/uploader.wxml-->
+<view class="container">
+<view class="bg bg_upload"></view>
+<text>上传全景照片</text>
+
+</view>

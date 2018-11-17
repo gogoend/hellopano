@@ -1,0 +1,28 @@
+/* pages/about/about.wxss */
+.copyright{
+  position: absolute;
+  bottom: 20rpx;
+  width: 100%;
+  display: block;
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+}
+
+.itemContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(200rpx)
+}
+
+.logo{
+  width: 360rpx;
+  height: 360rpx;
+}
+
+.name{
+  margin-top: 20rpx;
+  font-size: 60rpx;
+}
+

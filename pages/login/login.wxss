@@ -1,0 +1,43 @@
+.container{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  direction: row;
+  align-items: center;
+  text-align: center;
+}
+.login_block{
+   margin-top: 550rpx; 
+}
+.slogan{
+  font-size: 40rpx;
+  margin-bottom: 10px;
+}
+.login{
+  background-color: #29abe2;
+  color: #fff;
+  border: 1px solid #29abe2;
+}
+
+.go_back{
+  display: block;
+  margin-top: 10px
+}
+
+.avatar{
+  position: absolute;
+  width:220rpx;
+  height:220rpx;
+  border-radius: 50%;
+}
+
+.copyright{
+  position: absolute;
+  bottom: 20rpx;
+  width: 100%;
+  display: block;
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+}
+
