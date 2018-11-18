@@ -39,7 +39,7 @@ Page({
         if (event.detail.errMsg.match('fail auth deny')) {
           wx.showModal({
             title: '提示',
-            content: '抱歉，本程序没有权限访问您的用户信息，您将不能够点赞、打赏或者上传全景照片，如需继续使用这些功能，请点击确定，并在弹出页面中打开“使用我的用户信息”选项。',
+            content: '抱歉，小程序没有权限访问您的用户信息，您将不能收藏或点赞。请点击确定，并在弹出页面中打开“使用我的用户信息”选项。',
             success: function (res) {
               if (res.confirm) {
                 console.log('用户点击确定');
@@ -51,7 +51,7 @@ Page({
           })
         } else {
           wx.request({
-            url: app.globalConfig.baseDomain + '/auth/wx_auth_handler.php',
+            url: app.globalConfig.baseDomain + '/cms_core/auth/wx_auth_handler.php',
             method: 'GET',
             data: {
               'code': res.code
@@ -61,7 +61,7 @@ Page({
               wx.setStorageSync("s_id", res.header['Set-Cookie']);
               console.log(wx.getStorageSync("s_id"));
               wx.request({
-                url: app.globalConfig.baseDomain + '/auth/wx_auth_handler.php',
+                url: app.globalConfig.baseDomain + '/cms_core/auth/wx_auth_handler.php',
                 method: 'GET',
                 header: {
                   cookie: wx.getStorageSync("s_id")
