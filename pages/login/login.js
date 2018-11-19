@@ -51,7 +51,7 @@ Page({
           })
         } else {
           wx.request({
-            url: app.globalConfig.baseDomain + '/cms_core/auth/wx_auth_handler.php',
+            url: app.globalConfig.baseDomain + '/hp_wxapp/cms_core/auth/wx_auth_handler.php',
             method: 'GET',
             data: {
               'code': res.code
@@ -61,7 +61,7 @@ Page({
               wx.setStorageSync("s_id", res.header['Set-Cookie']);
               console.log(wx.getStorageSync("s_id"));
               wx.request({
-                url: app.globalConfig.baseDomain + '/cms_core/auth/wx_auth_handler.php',
+                url: app.globalConfig.baseDomain + '/hp_wxapp/cms_core/auth/wx_auth_handler.php',
                 method: 'GET',
                 header: {
                   cookie: wx.getStorageSync("s_id")

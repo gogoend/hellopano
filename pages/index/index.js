@@ -11,12 +11,6 @@ Page({
 
   },
 
-  gotoRead:function(event){
-      wx.navigateTo({
-        url: '/pages/read/read',
-      })
-      console.log(event);
-  },
 
 
   onReachBottom: function (event) {
@@ -28,7 +22,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var blogURL = app.globalConfig.blogURL+'/posts';
+    this.getBlogData(blogURL);
+  },
+  getBlogData:(url)=>{
+    wx.request({
+      url: url,
+      method:'GET',
+      header:{
+        "Content-Type":""
+      },
+      success:function(res){
+        console.log(res)
+      },
+      fail:function(error){
+        console.log(error)
+      }
+    })
   },
 
   /**

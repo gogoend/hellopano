@@ -6,7 +6,7 @@ page{
   height: 100%;
   width: 100%;
   background-color: rgba(244, 244, 244, 1);
-   font-size: 32rpx ;   
+  font-size: 32rpx ;   
 }
 
 view,button,image,text,input,textarea,canvas{
@@ -27,6 +27,3 @@ view,button,image,text,input,textarea,canvas{
   background-size: cover;
   background-position: center center;
 }
-
-
-

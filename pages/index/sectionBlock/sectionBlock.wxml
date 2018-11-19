@@ -1,0 +1,25 @@
+<view class="section_block">
+  <view bindtap="gotoRead" data-objId="" class="section_thumb">
+    <image class="section_thumb_img" src="{{postImg}}">
+    </image>
+    <view class="section_title">{{postTitle}}</view>
+  </view>
+  <view class="section_foot">
+    <view class="section_operation">
+      <view>
+        <image src='/ui/view_card/heart.svg'></image>
+        <text>255</text>
+      </view>
+      <view>
+        <image src='/ui/view_card/comment.svg'></image>
+        <text>31</text>
+      </view>
+    </view>
+    <view class="section_operation">
+      <view>
+        <image src='/ui/view_card/eye.svg'></image>
+        <text>27</text>
+      </view>
+    </view>
+  </view>
+</view>

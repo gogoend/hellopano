@@ -7,7 +7,6 @@
     "pages/about/about",
     "pages/login/login",
     "pages/logs/logs"
-
   ],
   "window": {
     "backgroundTextStyle": "light",

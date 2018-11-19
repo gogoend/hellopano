@@ -6,6 +6,7 @@ App({
     doNotAutoShowLogin:false
   },
   globalConfig:{
-    baseDomain:'https://blog.me4vr.com/hp_wxapp'
+    baseDomain:'https://blog.me4vr.com',
+    blogURL:'https://blog.me4vr.com/wp-json/wp/v2'
   }
 });
