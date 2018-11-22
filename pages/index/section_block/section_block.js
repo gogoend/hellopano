@@ -20,7 +20,7 @@ Component({
   methods: {
     gotoRead: function (event) {
       wx.navigateTo({
-        url: '/pages/read/read',
+        url: '/pages/read/read?postid=' + event.currentTarget.dataset.objid,
       })
       console.log(event);
     },

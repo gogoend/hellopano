@@ -1,10 +1,16 @@
 // pages/read/read.js
+var app=getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    post:{
+      title:'',
+      content:'',
+      img:''
+    }
 
   },
 
@@ -12,6 +18,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    wx.request({
+      url: app.globalConfig.blogURL + '/posts/' + options.postid,
+      success:function(res){
+        console.log(res);
+        that.setData({
+          post:{
+            title: res.data.title.rendered,
+            content: res.data.content.rendered,
+            img: res.data.jetpack_featured_media_url
+          }
+        })
+      }
+    })
 
   },
 
