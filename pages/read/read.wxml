@@ -5,7 +5,7 @@
       <text>{{post.title}}</text>
     </view>
     <view class="hr"></view>
-    <view class="articleMain">{{post.content}}</view>
+    <rich-text class="articleMain" nodes="{{post.content}}"></rich-text>
   </view>
   <view class="randomArticle">
   </view>
