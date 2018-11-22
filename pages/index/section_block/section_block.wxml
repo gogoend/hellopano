@@ -1,8 +1,8 @@
 <view class="section_block">
-  <view bindtap="gotoRead" data-objId="" class="section_thumb">
-    <image class="section_thumb_img" src="{{postImg}}">
+  <view bindtap="gotoRead" data-objId="{{post.id}}" class="section_thumb">
+    <image mode="aspectFill" lazy-load="{{true}}" class="section_thumb_img" src="{{post.jetpack_featured_media_url}}">
     </image>
-    <view class="section_title">{{postTitle}}</view>
+    <view class="section_title">{{post.title.rendered}}</view>
   </view>
   <view class="section_foot">
     <view class="section_operation">

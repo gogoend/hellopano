@@ -71,7 +71,7 @@ Page({
                   'iv': event.detail.iv
                 },
                 complete: function (res) {
-                  //console.log(res);
+                  console.log(res);
                   app.globalData.userInfo = event.detail.userInfo;
                   app.globalData.hasUserInfo=true;
                   that.setData({

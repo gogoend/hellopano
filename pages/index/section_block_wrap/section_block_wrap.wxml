@@ -1,0 +1,8 @@
+  <view class="section_block_wrap">
+    <text class="section_block_title">{{sectionBlockCate}}</text>
+    <scroll-view scroll-x="{{true}}">
+    <block wx:for="{{postsList}}" wx:for-item="post">
+      <section-block class="section_block_comp" post="{{post}}"></section-block>
+    </block>
+    </scroll-view>
+  </view>

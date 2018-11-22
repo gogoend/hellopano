@@ -1,2 +1,4 @@
-<!--pages/read/read.wxml-->
-<text>pages/read/read.wxml</text>
+<view class="container">
+<view class="header"><text>我是标题</text></view>
+<view class="article">我是内容。</view>
+</view>

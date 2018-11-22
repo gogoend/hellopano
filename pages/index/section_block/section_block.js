@@ -1,10 +1,10 @@
-// pages/index/sectionBlock.js
+// pages/index/section_block.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-
+    post: Object
   },
 
   /**

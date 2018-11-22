@@ -3,8 +3,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 320rpx;
-  box-shadow:2px 2px 4px rgba(27, 195, 234, 0.2);
+  height: 240rpx;
+  box-shadow:2px 2px 6px rgba(27, 195, 234, 0.2);
+  width: 100%;
+  margin: 0 auto 24rpx auto;
+
 }
 .loginBtn{
   background-color: #29abe2;

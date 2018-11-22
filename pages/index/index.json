@@ -1,5 +1,5 @@
 {
   "usingComponents":{
-    "section-block":"sectionBlock/sectionBlock"
+    "section-block-wrap":"section_block_wrap/section_block_wrap"
   }
 }

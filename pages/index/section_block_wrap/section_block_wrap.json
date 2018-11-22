@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "section-block": "../section_block/section_block"
+  }
+}

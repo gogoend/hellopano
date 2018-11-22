@@ -1,0 +1,35 @@
+.section_block_wrap{
+  display:flex;
+  flex-direction: column;
+}
+.section_block_title{
+  line-height: 2.5em;
+  margin-left: 5%;
+  font-size: 1.2em
+}
+.section_block_wrap>scroll-view{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+
+.section_block_wrap .section_block_comp{
+  position: relative;
+  display: inline-block;
+  flex-direction: column;
+  width: 90%;
+  height: 420rpx;
+  margin: 4px 2% 2px 2%;
+  flex-shrink: 0;
+  white-space: initial;
+}
+
+.section_block_wrap .section_block_comp:first-child{
+  margin-left: 5%;
+}
+
+.section_block_wrap .section_block_comp:last-child{
+  margin-right: 5%;
+}

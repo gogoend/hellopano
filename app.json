@@ -1,8 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/read/read",
-    "pages/blog/blog",
+    "pages/index/index",
     "pages/my/my",
     "pages/about/about",
     "pages/login/login",
@@ -24,12 +23,6 @@
         "text": "首页",
         "iconPath": "ui/tabs/index.png",
         "selectedIconPath": "ui/tabs/index_a.png"
-      },
-      {
-        "pagePath": "pages/blog/blog",
-        "text": "博文",
-        "iconPath": "ui/tabs/blog.png",
-        "selectedIconPath": "ui/tabs/blog_a.png"
       },
       {
         "pagePath": "pages/my/my",
