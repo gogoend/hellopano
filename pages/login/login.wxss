@@ -39,7 +39,7 @@
 .go_back{
   display: block;
   margin-top: 10px;
-  font-size:12px;
+  font-size:14px;
   color:rgb(191,246,252);
 }
 
@@ -47,7 +47,7 @@
   width:220rpx;
   height:220rpx;
   border-radius: 50%;
-  margin-bottom: 20rpx
+  margin-bottom: 64rpx
 }
 
 .copyright{
