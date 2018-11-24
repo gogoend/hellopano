@@ -12,7 +12,8 @@ Page({
     loading: true,
     loadingText: "内容正在路上",
     sectionCate: ['最新文章', '前端', 'Photoshop'],
-    postsList: []
+    postsList: [],
+    blinkTimer:null
   },
 
   onReachBottom: function(event) {
@@ -23,26 +24,36 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    var blogURL = app.globalConfig.blogURL + '/posts';
-    //console.log(blogURL);
-    this.getBlogData(blogURL);
     var that = this;
+    var blogURL = app.globalConfig.blogURL + '/posts';
+    that.getBlogData(blogURL);
 
-    var blinkTimer=setInterval(function() {
-      if(that.data.loading==true){
-      var text ="内容正在路上";
-      var loadingText = (that.data.loadingText == text + '...') ? text : (that.data.loadingText + '.');
-      console.log(loadingText)
-      that.setData({
-        loadingText: loadingText
-      })}
-    }, 500)
+    that.data.blinkTimer = setInterval(function() {
+      if (that.data.loading == true) {
+        var text = "内容正在路上";
+        var loadingText = (that.data.loadingText == text + '...') ? text : (that.data.loadingText + '.');
+        console.log(loadingText);
+        that.setData({
+          loadingText: loadingText
+        })
+      } else {
+        clearInterval(that.data.blinkTimer);
+      }
+    }, 500);
+    // setTimeout(function() {
+    //   if (that.data.postsList.length == 0) {
+    //     clearInterval(that.data.blinkTimer);
+    //     that.setData({
+    //       loadingText: '加载失败，请检查网络连接。'
+    //     });
+    //   }
+    // }, 5000)
 
-    //setInterval(function () { a = util.textLoadingBlink("内容正在路上");that.setData({ loadingText:util.textLoadingBlink("内容正在路上")}) }, 200)
   },
 
   getBlogData: function(url) {
     var that = this;
+    
     wx.request({
       url: url,
       method: 'GET',
@@ -60,8 +71,33 @@ Page({
         console.log(that.data.postsList)
       },
       fail: function(error) {
-        console.log(error)
+        clearInterval(that.data.blinkTimer);
+
+        that.setData({
+          loadingText: '加载失败，请检查网络连接。'
+        });
+        wx.showModal({
+          title: '网络错误',
+          content: '加载失败，请检查网络连接。是否重试？',
+          showCancel: true,
+          cancelText: '否',
+          cancelColor: '#999',
+          confirmText: '是',
+          confirmColor: 'rgb(41,171,226)',
+          success: function(res) {
+            if (res.confirm) {
+              console.log('confirm');
+            } else {
+              return;
+            }
+          },
+          fail: function(res) {},
+          complete: function(res) {
+
+          },
+        });
       }
+      
     })
   },
 
