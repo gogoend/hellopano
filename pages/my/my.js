@@ -19,11 +19,9 @@ Page({
   onShow: function() {
     if (app.globalData.userInfo == null) {
       if (app.globalData.doNotAutoShowLogin == false) {
-
         wx.navigateTo({
           url: '/pages/login/login'
         })
-
       }
     } else {
       console.log(app.globalData.userInfo);

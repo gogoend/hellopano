@@ -5,3 +5,7 @@
     </section-block-wrap>
   </block>
 </view>
+<view class="loadingModal" wx:if="{{loading}}">
+<image src="/ui/loading.svg"></image>
+<text>{{loadingText}}</text>
+</view>

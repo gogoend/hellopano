@@ -1,1 +1,22 @@
+view.loadingModal {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #eee;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size:0.8em;
+}
 
+view.loadingModal>image {
+height:400rpx;
+width:280rpx;
+margin-bottom:10px;
+
+}
