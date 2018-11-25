@@ -13,6 +13,6 @@
   <block wx:elif="{{loadingStatus=='error'}}">
     <image src="/ui/net_error.svg"></image>
     <text>{{loadingText}}</text>
-    <button bindtap='getBlogData'>重试</button>
+    <button data-url="{{blogURL}}" bindtap="tapRetry">重试</button>
   </block>
 </view>

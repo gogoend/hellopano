@@ -9,11 +9,14 @@ Page({
    * 页面的初始数据
    */
   data: {
+    blogURL : app.globalConfig.blogURL + '/posts',
+
     loadingStatus: "loading",
     loadingText: "",
     sectionCate: ['最新文章', '前端', 'Photoshop'],
     postsList: [],
-    blinkTimer: null
+    blinkTimer: null,
+    
   },
 
   onReachBottom: function(event) {
@@ -25,8 +28,7 @@ Page({
    */
   onLoad: function(options) {
     var that = this;
-    var blogURL = app.globalConfig.blogURL + '/posts';
-    that.getBlogData(blogURL);
+    that.getBlogData(that.data.blogURL);
     // setTimeout(function () {
     //   if (that.data.postsList.length == 0 && that.data.loading == true) {
     //     clearInterval(that.data.blinkTimer);
@@ -36,6 +38,10 @@ Page({
     //   }
     // }, 5000)
 
+  },
+  tapRetry:function(e){
+
+    this.getBlogData(e.currentTarget.dataset.url)
   },
 
   getBlogData: function(url) {
@@ -87,8 +93,7 @@ Page({
           confirmColor: '#29ABE2',
           success: function(res) {
             if (res.confirm) {
-              var blogURL = app.globalConfig.blogURL + '/posts';
-              that.getBlogData(blogURL);
+              that.getBlogData(url);
             } else {
               return;
             }
