@@ -15,8 +15,12 @@ view.article {
 
 view.article .header {
   margin: 0 auto;
-  padding: 48rpx 0;
+  padding: 36rpx 0;
   font-size: 1.5em;
+}
+
+view.article .header>text {
+  word-wrap: break-word;
 }
 
 view.hr {
@@ -24,8 +28,10 @@ view.hr {
   border-bottom: 1px dashed #999;
 }
 
-view.article .articleMain {
-  margin: 0 auto;
-  padding: 40rpx 0 64rpx 0;
+view.article rich-text.articleMain {
+  margin: 40rpx auto 0 auto;
   width: 100%;
+  display: block;
+  padding-bottom: 40rpx
 }
+
