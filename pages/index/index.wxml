@@ -5,7 +5,14 @@
     </section-block-wrap>
   </block>
 </view>
-<view class="loadingModal" wx:if="{{loading}}">
-<image src="/ui/loading.svg"></image>
-<text>{{loadingText}}</text>
+<view class="loadingModal" wx:if="{{loadingStatus!='finish'}}">
+  <block wx:if="{{loadingStatus=='loading'}}">
+    <image src="/ui/loading.svg"></image>
+    <text>{{loadingText}}</text>
+  </block>
+  <block wx:elif="{{loadingStatus=='error'}}">
+    <image src="/ui/net_error.svg"></image>
+    <text>{{loadingText}}</text>
+    <button bindtap='getBlogData'>重试</button>
+  </block>
 </view>

@@ -9,11 +9,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    loading: true,
-    loadingText: "内容正在路上",
+    loadingStatus: "loading",
+    loadingText: "",
     sectionCate: ['最新文章', '前端', 'Photoshop'],
     postsList: [],
-    blinkTimer:null
+    blinkTimer: null
   },
 
   onReachBottom: function(event) {
@@ -27,24 +27,11 @@ Page({
     var that = this;
     var blogURL = app.globalConfig.blogURL + '/posts';
     that.getBlogData(blogURL);
-
-    that.data.blinkTimer = setInterval(function() {
-      if (that.data.loading == true) {
-        var text = "内容正在路上";
-        var loadingText = (that.data.loadingText == text + '...') ? text : (that.data.loadingText + '.');
-        console.log(loadingText);
-        that.setData({
-          loadingText: loadingText
-        })
-      } else {
-        clearInterval(that.data.blinkTimer);
-      }
-    }, 500);
-    // setTimeout(function() {
-    //   if (that.data.postsList.length == 0) {
+    // setTimeout(function () {
+    //   if (that.data.postsList.length == 0 && that.data.loading == true) {
     //     clearInterval(that.data.blinkTimer);
     //     that.setData({
-    //       loadingText: '加载失败，请检查网络连接。'
+    //       loadingText: '加载超时，请检查网络连接。'
     //     });
     //   }
     // }, 5000)
@@ -53,7 +40,20 @@ Page({
 
   getBlogData: function(url) {
     var that = this;
-    
+    that.setData({ loadingStatus: "loading", loadingText:"内容正在路上"})
+    that.data.blinkTimer = setInterval(function() {
+      if (that.data.loadingStatus == "loading") {
+        var text = "内容正在路上";
+        var loadingText = (that.data.loadingText == text + '...') ? text : (that.data.loadingText + '.');
+        console.log(loadingText);
+        that.setData({
+          loadingText: loadingText
+        });
+      } else {
+        clearInterval(that.data.blinkTimer);
+      }
+    }, 500);
+
     wx.request({
       url: url,
       method: 'GET',
@@ -66,7 +66,7 @@ Page({
             postsList: postsList
           }),
           that.setData({
-            loading: false
+            loadingStatus: "finish"
           });
         console.log(that.data.postsList)
       },
@@ -74,6 +74,7 @@ Page({
         clearInterval(that.data.blinkTimer);
 
         that.setData({
+          loadingStatus: "error",
           loadingText: '加载失败，请检查网络连接。'
         });
         wx.showModal({
@@ -81,23 +82,22 @@ Page({
           content: '加载失败，请检查网络连接。是否重试？',
           showCancel: true,
           cancelText: '否',
-          cancelColor: '#999',
+          cancelColor: '#999999',
           confirmText: '是',
-          confirmColor: 'rgb(41,171,226)',
+          confirmColor: '#29ABE2',
           success: function(res) {
             if (res.confirm) {
-              console.log('confirm');
+              var blogURL = app.globalConfig.blogURL + '/posts';
+              that.getBlogData(blogURL);
             } else {
               return;
             }
           },
           fail: function(res) {},
-          complete: function(res) {
-
-          },
+          complete: function(res) {},
         });
       }
-      
+
     })
   },
 
