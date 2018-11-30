@@ -20,10 +20,15 @@ Component({
   methods: {
     gotoRead: function (event) {
       wx.navigateTo({
-        url: '/pages/read/read?postid=' + event.currentTarget.dataset.objid,
+        url: '/pages/read/read?postid=' + event.target.dataset.objid,
       })
       console.log(event);
     },
-
+    zan:function(event){
+      //console.log(event)
+    },
+    conout: function (event) {
+      console.log(event.target.dataset)
+    }
   }
 })

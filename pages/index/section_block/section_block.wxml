@@ -1,18 +1,14 @@
-<view class="section_block">
-  <view bindtap="gotoRead" data-objId="{{post.id}}" class="section_thumb">
+<view class="section_block"  data-objId="{{post.id}}" catchtap='conout'>
+  <view class="section_thumb" catchtap0="gotoRead">
     <image mode="aspectFill" lazy-load="{{true}}" class="section_thumb_img" src="{{post.jetpack_featured_media_url}}">
     </image>
     <view class="section_title">{{post.title.rendered}}</view>
   </view>
   <view class="section_foot">
     <view class="section_operation">
-      <view>
+      <view data-role='zan'>
         <image src='/ui/view_card/heart.svg'></image>
         <text>255</text>
-      </view>
-      <view>
-        <image src='/ui/view_card/comment.svg'></image>
-        <text>31</text>
       </view>
     </view>
     <view class="section_operation">

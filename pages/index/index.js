@@ -16,7 +16,6 @@ Page({
     sectionCate: ['最新文章', '前端', 'Photoshop'],
     postsList: [],
     blinkTimer: null,
-    
   },
 
   onReachBottom: function(event) {
@@ -56,6 +55,7 @@ Page({
           loadingText: loadingText
         });
       } else {
+        console.log(that.data.blinkTimer);
         clearInterval(that.data.blinkTimer);
       }
     }, 500);
