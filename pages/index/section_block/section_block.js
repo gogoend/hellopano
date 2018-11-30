@@ -18,17 +18,21 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    gotoRead: function (event) {
-      wx.navigateTo({
-        url: '/pages/read/read?postid=' + event.target.dataset.objid,
-      })
-      console.log(event);
-    },
-    zan:function(event){
-      //console.log(event)
-    },
-    conout: function (event) {
-      console.log(event.target.dataset)
+    sectionBlockTap: function(e) {
+      switch (e.target.dataset.role) {
+        case 'zan':
+          {
+            console.log(e.target.dataset.role)
+          };
+          break;
+        default:
+          {
+            wx.navigateTo({
+              url: '/pages/read/read?postid=' + e.currentTarget.dataset.objid,
+            })
+          };
+          break;
+      }
     }
   }
 })
