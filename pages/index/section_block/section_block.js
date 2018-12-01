@@ -1,4 +1,5 @@
 // pages/index/section_block.js
+const app = getApp();
 Component({
   /**
    * 组件的属性列表
@@ -22,7 +23,17 @@ Component({
       switch (e.target.dataset.role) {
         case 'zan':
           {
-            console.log(e.target.dataset.role)
+            console.log(e.currentTarget.dataset.objid);
+            wx.request({
+              url: app.globalConfig.baseDomain + '/hp_wxapp/cms_gate/content_handler.php',
+              method: 'POST',
+              header: {
+                "Content-Type": "application/x-www-form-urlencoded"
+              },
+              data: {
+                "obj_id": e.currentTarget.dataset.objid
+              }
+            })
           };
           break;
         default:

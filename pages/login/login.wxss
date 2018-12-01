@@ -18,7 +18,6 @@
 }
 .login_block>view{
   width: 80%;
-  
 }
 .slogan{
   margin: 10rpx
