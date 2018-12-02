@@ -50,12 +50,12 @@ Page({
       if (that.data.loadingStatus == "loading") {
         var text = "内容正在路上";
         var loadingText = (that.data.loadingText == text + '...') ? text : (that.data.loadingText + '.');
-        console.log(loadingText);
+        //console.log(loadingText);
         that.setData({
           loadingText: loadingText
         });
       } else {
-        console.log(that.data.blinkTimer);
+        //console.log(that.data.blinkTimer);
         clearInterval(that.data.blinkTimer);
       }
     }, 500);
