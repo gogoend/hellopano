@@ -13,8 +13,6 @@
 
       <!-- <button class="loginBtn" bindtap='gotoLogin'>登录我的全视界</button> -->
     </block> 
-
-
       <block wx:if="{{hasUserInfo!==false}}">
         <image bindtap="bindViewTap" class="user_avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
         <view class="user_nickname">{{userInfo.nickName}}</view>

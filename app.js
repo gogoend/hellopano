@@ -8,8 +8,8 @@ App({
   globalConfig:{
     baseDomain:'https://blog.me4vr.com',
     blogURL:'https://blog.me4vr.com/wp-json/wp/v2',
-    baseDomain: 'http://localhost',
-    blogURL: 'http://localhost/wp-json/wp/v2'
+    // baseDomain: 'http://localhost',
+    // blogURL: 'http://localhost/wp-json/wp/v2'
   },
   onLaunch:function(){
     var app = this;
@@ -28,19 +28,19 @@ App({
                 wx.setStorageSync("s_id", res.header['Set-Cookie']);
                 console.log(wx.getStorageSync("s_id"));
                 wx.request({
-                  url: app.globalConfig.baseDomain + '/hp_wxapp/cms_gate/auth/wx_auth_handler.php',
+                  url: app.globalConfig.baseDomain + '/hp_wxapp/cms_gate/auth/wx_auth_handler.php?continue=yes',
                   method: 'GET',
                   header: {
                     cookie: wx.getStorageSync("s_id")
                   },
                   complete: function (res) {
                     console.log(res);
-                    app.globalData.userInfo = event.detail.userInfo;
+                    app.globalData.userInfo = res.data;
                     app.globalData.hasUserInfo = true;
-                    that.setData({
-                      userInfo: event.detail.userInfo,
-                      hasUserInfo: true
-                    });
+                    // that.setData({
+                    //   userInfo: event.detail.userInfo,
+                    //   hasUserInfo: true
+                    // });
                   }
                 });
               } else if (res.data.error == "5000") {
