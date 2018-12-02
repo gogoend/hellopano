@@ -8,11 +8,14 @@ App({
   globalConfig:{
     baseDomain:'https://blog.me4vr.com',
     blogURL:'https://blog.me4vr.com/wp-json/wp/v2',
-    // baseDomain: 'http://localhost',
-    // blogURL: 'http://localhost/wp-json/wp/v2'
+    baseDomain: 'http://localhost',
+    blogURL: 'http://localhost/wp-json/wp/v2'
   },
   onLaunch:function(){
     var app = this;
+    if(!wx.getStorageSync("s_id")){
+      return false;
+    }else{
     wx.login({
       success: function (res) {
          {
@@ -36,6 +39,7 @@ App({
                   complete: function (res) {
                     console.log(res);
                     app.globalData.userInfo = res.data;
+                    app.globalData.userInfo.avatarUrl = app.globalConfig.baseDomain + '/hp_wxapp/cms_gate/auth/wx_auth_handler.php?avatar=' + app.globalData.userInfo.uuid
                     app.globalData.hasUserInfo = true;
                     // that.setData({
                     //   userInfo: event.detail.userInfo,
@@ -84,5 +88,6 @@ App({
         return false;
       }
     });
+  }
   }
 });
