@@ -10,7 +10,6 @@ Page({
    */
   data: {
     blogURL : app.globalConfig.blogURL + '/posts',
-
     loadingStatus: "loading",
     loadingText: "",
     sectionCate: ['最新文章', '前端', 'Photoshop'],
@@ -45,20 +44,15 @@ Page({
 
   getBlogData: function(url) {
     var that = this;
-    that.setData({ loadingStatus: "loading", loadingText:"内容正在路上"})
-    that.data.blinkTimer = setInterval(function() {
-      if (that.data.loadingStatus == "loading") {
-        var text = "内容正在路上";
-        var loadingText = (that.data.loadingText == text + '...') ? text : (that.data.loadingText + '.');
-        //console.log(loadingText);
+
+    setInterval(
+      function(){
         that.setData({
-          loadingText: loadingText
-        });
-      } else {
-        //console.log(that.data.blinkTimer);
-        clearInterval(that.data.blinkTimer);
+          loadingStatus: "loading", loadingText: util.loadingTextBlink('什么鬼')
+ });
       }
-    }, 500);
+      , 500);
+
 
     wx.request({
       url: url,
@@ -78,7 +72,6 @@ Page({
       },
       fail: function(error) {
         clearInterval(that.data.blinkTimer);
-
         that.setData({
           loadingStatus: "error",
           loadingText: '加载失败，请检查网络连接。'
@@ -102,7 +95,6 @@ Page({
           complete: function(res) {},
         });
       }
-
     })
   },
 

@@ -13,7 +13,26 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const loadingTextBlink = function(text) {
+  //setInterval((text) => 
+  {
+    if (that.data.loadingStatus == "loading") {
+      var loadingText = (that.data.loadingText == text + '...') ? text : (that.data.loadingText + '.');
+      //console.log(loadingText);
+      // that.setData({
+      //   loadingText: loadingText
+      // });
+      return loadingText;
+    } else {
+      //console.log(that.data.blinkTimer);
+      return false;
+      clearInterval(that.data.blinkTimer);
+    }
+    //}, 500)
+  }
+}
 
 module.exports = {
   formatTime: formatTime,
+  loadingTextBlink: loadingTextBlink,
 }
