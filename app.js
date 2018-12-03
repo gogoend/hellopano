@@ -4,7 +4,10 @@ App({
   globalData: {
     userInfo: null,
     hasUserInfo:false,
-    doNotAutoShowLogin:false
+    doNotAutoShowLogin:false,
+    postsLoadingStatus: "loading",
+    postsLoadingText: "",
+    blinkTimer: null,
   },
   globalConfig:{
     baseDomain:'https://blog.me4vr.com',

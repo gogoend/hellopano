@@ -10,11 +10,9 @@ Page({
    */
   data: {
     blogURL : app.globalConfig.blogURL + '/posts',
-    loadingStatus: "loading",
-    loadingText: "",
+
     sectionCate: ['最新文章', '前端', 'Photoshop'],
     postsList: [],
-    blinkTimer: null,
   },
 
   onReachBottom: function(event) {
@@ -38,21 +36,21 @@ Page({
 
   },
   tapRetry:function(e){
-
     this.getBlogData(e.currentTarget.dataset.url)
   },
 
   getBlogData: function(url) {
     var that = this;
-
+    //that.setData({ loadingStatus: "loading", loadingText:"内容正在路上"});
+    
+    //定时运行，改文字
     setInterval(
-      function(){
+      function () {
         that.setData({
           loadingStatus: "loading", loadingText: util.loadingTextBlink('什么鬼')
- });
+        });
       }
       , 500);
-
 
     wx.request({
       url: url,

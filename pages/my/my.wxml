@@ -4,10 +4,7 @@
   <view class="userinfo">
     <image class="user_cover" src="/ui/mycenter_default_cover.png"></image>
     <view class="user_area">
-
-
        <block wx:if="{{hasUserInfo===false}}">
-
         <image bindtap="gotoLogin" class="user_avatar" src="/ui/default_avatar.svg" background-size="cover"></image>
         <view class="user_nickname" bindtap="gotoLogin">登录，发现全视界</view>
 
@@ -23,7 +20,7 @@
     <view>我的全景</view>
     <view>我的博文</view>
     <view>我的收藏</view>
-    <view>绑定账号</view>
+    <view style="color:#f00">注销登陆</view>
   </view>
 
   <view class="menu_list">
